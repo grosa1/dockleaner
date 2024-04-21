@@ -2,7 +2,7 @@
 
 Rule-based refactoring tool for fixing Dockerfile smells detected by [hadolint](https://github.com/hadolint/hadolint).
 
-A detailed description of the tool and its evaluation can be found in the [preprint of the original article](https://giovannirosa.com/assets/pdf/rosa2024fixingsmells.pdf).
+A detailed description of the tool and its evaluation can be found in the [preprint of the source article](https://giovannirosa.com/assets/pdf/rosa2024fixingsmells.pdf).
 
 ## Setup
 
