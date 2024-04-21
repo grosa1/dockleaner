@@ -1,0 +1,11 @@
+FROM python
+
+MAINTAINER test
+
+ADD . .
+
+RUN python .
+
+ADD . .
+
+COPY / /

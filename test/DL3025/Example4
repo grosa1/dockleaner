@@ -1,0 +1,12 @@
+FROM python:3.10-slim-buster
+
+CMD bash -c "\
+     echo 'Starting container...' ; \
+    mkdir -p app/logs ; \
+    touch app/logs/access.log ; \
+    touch app/logs/error.log ; \
+    echo 'Container ready.' ; \
+    " \
+    && tail -f /app/logs/access.log /app/logs/error.log
+
+ENTRYPOINT ["python", "app.py"]

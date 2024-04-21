@@ -1,0 +1,26 @@
+FROM ubuntu:bionic
+
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=US/Pacific
+
+RUN apt -y update
+RUN apt -y upgrade
+
+RUN apt -y install build-essential
+RUN apt -y install git
+RUN apt -y install wget
+
+RUN apt -y install python
+RUN apt -y install python-setuptools
+RUN apt -y install python-pip
+RUN apt -y install python-tk
+RUN apt -y install tk
+RUN apt -y install tcl
+RUN apt -y install tclx8.4
+RUN apt -y install tcllib
+RUN apt -y install tcl-tls
+
+
+RUN apt -y install iputils-ping
+RUN apt -y install snmp
+RUN apt -y install snmptrapd

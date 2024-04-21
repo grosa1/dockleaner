@@ -1,0 +1,4 @@
+FROM ubuntu:precise
+
+RUN apt-get -qq update
+RUN apt-get install -y -qq libgtk2.0-0 libasound2 libpulse0 libgtk-3-0

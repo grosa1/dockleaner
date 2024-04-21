@@ -1,0 +1,11 @@
+FROM ubuntu:20.04
+
+RUN apt-get update
+RUN apt-get install -y ruby
+# test
+RUN apt-get clean
+COPY . . 
+
+RUN rm -rf /var/lib/apt/lists/*
+
+RUN apt-get install -y python

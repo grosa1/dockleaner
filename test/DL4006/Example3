@@ -1,0 +1,3 @@
+FROM alpine
+
+RUN ping https://asdasdasd | wc -l > /number

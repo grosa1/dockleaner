@@ -1,0 +1,9 @@
+FROM python
+
+ADD . .
+
+RUN python .
+
+ADD . .
+
+COPY / /

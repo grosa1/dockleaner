@@ -1,0 +1,8 @@
+FROM node:12.11.1
+
+MAINTAINER "Skater Team <skater@team.org>" \
+            "Biker Team <biker@team.org>" \
+            "Surfer Team <surfer@team.org>"
+
+WORKDIR /usr/src/app
+RUN npm install --global yarn

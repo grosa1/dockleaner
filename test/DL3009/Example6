@@ -1,0 +1,6 @@
+FROM php:7.2
+
+ENV redis_version 6.0.8
+
+RUN apt-get update \
+    && apt-get install -y wget libssl-dev

@@ -1,0 +1,3 @@
+FROM ubuntu
+
+RUN ping https://asdasdasd | wc -l > /number

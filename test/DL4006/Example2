@@ -1,0 +1,4 @@
+FROM busybox
+
+RUN ping https://asdasdasd | wc -l > /number
+

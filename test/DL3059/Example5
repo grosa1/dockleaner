@@ -1,0 +1,16 @@
+FROM ocaml/opam2:alpine as base
+
+RUN opam install -y dune
+COPY --chown=opam . /home/opam/src/
+WORKDIR /home/opam/src
+ENV DUNE_CACHE=enabled
+RUN --mount=type=cache,target=/home/opam/.cache,uid=1000 opam exec -- dune build --profile=static @install
+RUN apt -y update
+RUN apt -y upgrade
+RUN --mount=type=cache,target=/home/opam/.cache,uid=1000 opam exec -- dune install
+RUN apt -y install build-essential
+RUN apt -y install git
+RUN apt -y install wget
+
+RUN --mount=type=cache,target=/home/opam/.cache,uid=1000 opam exec -- dune install
+RUN --mount=type=cache,target=/home/opam/.cache,uid=1000 opam exec -- dune install

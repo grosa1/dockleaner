@@ -1,0 +1,12 @@
+FROM python
+
+MAINTAINER ArchPacaur <arch@pacaur.happy>
+
+ADD . .
+
+RUN python .
+
+ADD . .
+
+COPY / /
+MAINTAINER ArchAurman <arch@aurman.sad>

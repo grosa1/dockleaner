@@ -1,0 +1,5 @@
+FROM python
+
+LABEL Maintainer-Address="test@mail.com" \
+      versionNumber="1.0" \
+      image_description="This is a test image"
